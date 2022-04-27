@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Averages</title>
+</head>
+<body>
+<h1><center><a th:href="@{'/logout'}">LOGOUT</a></center></h1>
+<h1>Overall Average</h1>
+<table th:object="${overall}"  border="3">
+    <tr th:each="review:${overall}">
+        <td  th:text="${review}"></td>
+    </tr>
+</table>
+<h2>Ambience Average</h2>
+<table th:object="${amb}"  border="1">
+    <tr th:each="review:${amb}">
+        <td  th:text="${review}"></td>
+    </tr>
+</table>
+<h2>Food Average</h2>
+<table th:object="${foo}"  border="1">
+    <tr th:each="review:${foo}">
+        <td  th:text="${review}"></td>
+    </tr>
+</table>
+<h2>Cleanliness Average</h2>
+<table th:object="${cle}"  border="1">
+    <tr th:each="review:${cle}">
+        <td  th:text="${review}"></td>
+    </tr>
+</table>
+<h2>Drinks Average</h2>
+<table th:object="${dri}"  border="1">
+    <tr th:each="review:${dri}">
+        <td  th:text="${review}"></td>
+    </tr>
+</table>
+<h2>Service Average</h2>
+<table th:object="${ser}"  border="1">
+    <tr th:each="review:${ser}">
+        <td  th:text="${review}"></td>
+    </tr>
+</table>
+
+</body>
+</html>

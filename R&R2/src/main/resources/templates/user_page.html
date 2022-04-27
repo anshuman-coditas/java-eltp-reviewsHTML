@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Dashboard</title>
+</head>
+<body>
+<h1>Enter Reviews</h1>
+<form action="#" th:action="@{/save2}" th:object="${review}" method="post">
+Ambience : <input type="number" th:field="*{ambience}">
+Food : <input type="number" th:field="*{food}">
+Cleanliness : <input type="number" th:field="*{clean}">
+Drinks : <input type="number" th:field="*{drinks}">
+Service : <input type="number" th:field="*{service}">
+<input type="submit" value="SUBMIT">
+</form>
+</body>
+</html>
